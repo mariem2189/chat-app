@@ -1,0 +1,39 @@
+[
+    {
+      "id": "1",
+      "type": "user",
+      "text": "Hey SUP",
+      "response": ""
+    },
+    {
+      "id": "2",
+      "type": "reply",
+      "text": "Good Thanks",
+      "response": ""
+    },
+    {
+      "id": "3",
+      "type": "reply",
+      "text": "How about u",
+      "response": ""
+    },
+    {
+      "id": "4",
+      "type": "user",
+      "text": "doing great",
+      "response": ""
+    },
+    {
+      "id": "5",
+      "type": "user",
+      "text": "",
+      "response": ""
+    },
+    {
+      "id": "6",
+      "root": true,
+      "type": "reply",
+      "text": "hey",
+      "response": ""
+    }
+  ]
