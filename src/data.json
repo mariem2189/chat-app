@@ -32,7 +32,7 @@
     {
       "id": "6",
       "root": true,
-      "type": "reply",
+      "type": "user",
       "text": "hey",
       "response": ""
     }

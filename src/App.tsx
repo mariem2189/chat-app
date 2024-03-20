@@ -48,10 +48,13 @@ function App() {
   }
 
   const showNextMessage = (currentMessage: MessageItem) => {
-    const nextMessage = data.find((message) => message.id === currentMessage.responses[0]);
-    if (nextMessage) {
-      setCurrentMessage(nextMessage as unknown as MessageItem);
-      setMessageHistory([...messageHistory, nextMessage as unknown as MessageItem]);
+    if (currentMessage.responses.length > 0) {
+      const responseId = currentMessage.responses[0];
+      const nextMessage = data.find((message) => message.id === responseId && message.type === MessageItemType.REPLY);
+      if (nextMessage) {
+        setCurrentMessage(nextMessage as unknown as MessageItem);
+        setMessageHistory([...messageHistory, nextMessage as unknown as MessageItem]);
+      }
     }
   };
 
@@ -83,7 +86,6 @@ function App() {
                   <button
                     className="bg-white text-dark-body text-sm px-4 py-2 border-light-body border-2 border-solid rounded-xl"
                     onClick={() => {
-                      console.log("Clicked");
                       if (currentMessage) {
                         showNextMessage(currentMessage);
                       }
